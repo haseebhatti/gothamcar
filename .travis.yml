@@ -9,7 +9,9 @@ node_js:
 before_script:
   - npm install -g bower
   - bower install
+  - npm start
 
 
 script:
   - npm run test-single-run
+ - npm run protractor
