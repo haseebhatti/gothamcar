@@ -1,0 +1,94 @@
+
+
+
+#headerWrapper{
+
+width:100%;
+
+}
+
+
+
+.logo{
+
+padding: 10px;
+
+margin-right:10px;
+
+font-size: 35px;
+
+font-family:fantasy;
+
+
+}
+
+
+
+.tagline{
+
+font-size:10px;
+
+margin-top:30px;
+
+margin-left:200px;
+
+font-family: monospace;
+
+
+}
+
+
+
+.nav-wrapper{
+
+
+margin-left:100px;
+
+margin-top:15px;
+
+}
+
+
+
+
+
+#carListWrapper {
+
+
+width:100%;
+
+padding:10px;
+
+}
+
+
+
+#carListWrapper input{
+
+
+width:25%;
+
+
+}
+
+
+
+#carListWrapper .car{
+
+border: 1px solid gray;
+
+padding: 10px;
+
+margin-bottom:10px;
+
+
+}
+
+
+
+#carListWrapper .car .car-details{
+
+margin-left:400px;
+
+
+}

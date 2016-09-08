@@ -1,0 +1,21 @@
+{
+  "name": "gothamcar",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "haseeb bhatti <haseebhatti@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/haseebhatti/gothamcar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1"
+  }
+}
