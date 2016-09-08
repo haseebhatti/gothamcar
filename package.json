@@ -23,9 +23,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/afzal113/Mywork113/issues"
+    "url": "https://github.com/haseebhatti/gothamcar.git"
   },
-  "homepage": "https://github.com/afzal113/Mywork113#readme",
+  "homepage": "https://github.com/haseebhatti/gothamcar.git",
   "devDependencies": {
     "bower": "^1.7.9",
     "gulp": "^3.9.1",

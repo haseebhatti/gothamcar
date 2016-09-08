@@ -1,17 +1,17 @@
 (function () {
   'use strict';
   angular.module('app.routing', ['ui.router'])
-
     .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('/cars', {
-          templateUrl: 'app/car-list.html',
-          controller: 'MyCtrl2'
+        .state('cart', {
+          url: '/cart',
+          templateUrl: 'checkout.html',
+          controller: 'SelectedCarsCtrl'
         })
-        .state('/cart', {
-          templateUrl: 'app/car-list.html',
-          controller: 'KartListCtrl'
-        });
+        .state('cars', {
+          url: '/cars',
+          templateUrl: 'index.html'
+        })
 
       $urlRouterProvider.otherwise('/cars');
     });
