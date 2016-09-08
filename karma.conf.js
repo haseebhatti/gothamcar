@@ -17,8 +17,6 @@ module.exports = function (config) {
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-mocks/angular-mocks.js',
       'gothamCar/**/*.js',
-      '**/checkout.html',
-      '**/test.html',
       '../test/unit/**/*.spec.js'
     ],
 
