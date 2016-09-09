@@ -1,28 +1,26 @@
 describe('Routing', function () {
   'use strict';
-  var $rootScope,$state,$location,$httpBackend;
+  var $rootScope,$state,$location;
   beforeEach(module('app.checkout', 'app.routing'));
   beforeEach(inject(function ($injector) {
     $rootScope = $injector.get('$rootScope');
     $state = $injector.get('$state');
     $location = $injector.get('$location');
-    $httpBackend = $injector.get('$httpBackend');
-
-    // $httpBackend.expectGET('test.html').respond({status: 200, data: ''})
-    $httpBackend.expectGET('index.html').respond({status: 200, data: ''});
-    $httpBackend.expectGET('checkout.html').respond({status: 200, data: ''});
-  // homepage = $httpBackend.when('GET', 'index.html')
-  //   .respond('you are in index.html')
+    var $templateCache = $injector.get('$templateCache');
+    $templateCache.put('checkout.tpl.html', '');
+    $templateCache.put('index.html', '');
   }));
-  afterEach(function () {
-    $httpBackend.verifyNoOutstandingExpectation();
-    $httpBackend.verifyNoOutstandingRequest();
-  });
 
-  xit('should respond when state is cart', function () {
+  it('should respond when state is cart', function () {
     $state.go('cart');
-    $httpBackend.flush();
+    $rootScope.$digest();
     expect($state.current.url).toEqual('/cart');
     expect($location.$$path).toEqual('/cart');
+  });
+  it('should got to cars when url is invalid', function () {
+    $location.url('/stuff');
+    $rootScope.$digest();
+    expect($state.current.url).toEqual('/cars');
+    expect($location.$$path).toEqual('/cars');
   });
 });

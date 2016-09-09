@@ -30,9 +30,9 @@
 
 			<ul class="nav nav-pills">
 
-				<li class="active"><a href="#/cars">Cars</a></li>
+				<li class="active"><a ui-sref="cars">Cars</a></li>
 
-				<li><a href="#/cart">CART</a></li>
+				<li><a ui-sref="cart">CART</a></li>
 
 			</ul>
 
@@ -49,7 +49,7 @@
 	</div>
 
 
-<div ng-view>
+<div ui-view>
 
 </div>
 
@@ -67,8 +67,9 @@
 	<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="gothamCar/home/app.js"></script>
 	<script src="gothamCar/checkout/checkout.js"></script>
+	<script src="gothamCar/checkout/checkoutCtrl.js"></script>
 	<script src="gothamCar/home/carService.js"></script>
-	<script src="gothamCar/home/HomePageController.js"></script>
+	<script src="gothamCar/home/homePageController.js"></script>
 	<script src="gothamCar/routingStuff/gothamCarRouting.js"></script>
 
 </body>

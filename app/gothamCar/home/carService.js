@@ -110,8 +110,7 @@
       return $http.get('/inventory').then(function (response) {
         return response.data;
       // we will work on thi tmmrw. we will simulate a failure
-      }).catch(carService
-      );
+      }).catch(carService);
     }
     return {
       getData: getDataFn

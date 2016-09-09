@@ -5,13 +5,13 @@
       $stateProvider
         .state('cart', {
           url: '/cart',
-          templateUrl: 'checkout.html',
+          templateUrl: 'checkout.tpl.html',
           controller: 'SelectedCarsCtrl'
         })
         .state('cars', {
           url: '/cars',
-          templateUrl: 'index.html'
-        })
+          templateUrl: 'checkout.tpl.html'
+        });
 
       $urlRouterProvider.otherwise('/cars');
     });
