@@ -41,8 +41,11 @@
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2",
+    "karma-webpack": "^1.8.0",
+    "path": "^0.12.7",
     "phantom  js": "^2.1.7",
     "protractor": "^4.0.3",
-    "uglify": "^0.1.5"
+    "uglify": "^0.1.5",
+    "webpack": "^1.13.2"
   }
 }

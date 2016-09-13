@@ -104,20 +104,21 @@
       }];
     return cars;
   }
-
+  var edmondsUrl = 'https://api.edmunds.com/api/vehicle/v2/makes?fmt=json&api_key=jzu8gwx7pnex9pz3qe8kzjrh';
   function carServiceFactory ($http, carService) {
     function getDataFn () {
-      return $http.get('/inventory').then(function (response) {
-        return response.data;
-      // we will work on thi tmmrw. we will simulate a failure
-      }).catch(carService);
+      return $http.get(edmondsUrl)
+        .then(function (response) {
+          return response.data;
+        // we will work on thi tmmrw. we will simulate a failure
+        })
+        .catch(carService);
     }
     return {
       getData: getDataFn
     };
   }
   angular.module('app.homePage', [])
-
     .value('carService', carService())
     .factory('carServiceFactory', carServiceFactory);
 }());

@@ -1,6 +1,7 @@
 // Karma configuration
 // Generated on Mon Sep 05 2016 08:01:17 GMT-0400 (Eastern Daylight Time)
-
+var webpackConfig = require('./webpack.config.js');
+webpackConfig.entry = {};
 module.exports = function (config) {
   config.set({
 
@@ -13,10 +14,8 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'vendor/angular/angular.js',
-      'vendor/angular-ui-router/release/angular-ui-router.js',
-      'vendor/angular-mocks/angular-mocks.js',
-      'gothamCar/**/*.js',
+      './bundle.js',
+      './gothamCar/**/*.tpl.html',
       '../test/unit/**/*.spec.js'
     ],
 
@@ -26,7 +25,9 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      './app/bundle.js': ['webpack']
     },
+    webpack: webpackConfig,
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

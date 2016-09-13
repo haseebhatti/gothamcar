@@ -1,45 +1,4 @@
-<div>
-  <ul class="list-unstyled" >
+<div ng-controller = 'SelectedCarsCtrl as sc'>
+{{sc.price}}
 
-    <li class="car"
-      style="background: white url(image/{{car.image_path}}) no-repeat"
-      ng-repeat="car in allproducts">
-
-
-      <div class="car-details clearfix">
-
-        <h3>{{sc.price}}</h3>
-
-        <p>{{car.shipping_details}}</p>
-
-        <ul class="list-unstyled list-inline">
-
-          <li>rating: {{car.stock_availability}}</li>
-
-          <li>Binding: {{car.price}}</li>
-
-          <li>Publisher: {{car.price}}</li>
-
-          <li>Released: {{car.price}}</li>
-
-        </ul>
-
-        <p>{{car.price}}</p>
-
-        <button class="btn btn-info pull-right" ng-click="addToKart(car)">Add
-        </button>
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </li>
-
-  </ul>
 </div>

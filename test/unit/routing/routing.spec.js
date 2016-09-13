@@ -7,8 +7,8 @@ describe('Routing', function () {
     $state = $injector.get('$state');
     $location = $injector.get('$location');
     var $templateCache = $injector.get('$templateCache');
-    $templateCache.put('checkout.tpl.html', '');
-    $templateCache.put('index.html', '');
+    $templateCache.put('gothamCar/checkout/checkout.tpl.html', '');
+    $templateCache.put('gothamCar/home/homePage.tpl.html', '');
   }));
 
   it('should respond when state is cart', function () {
