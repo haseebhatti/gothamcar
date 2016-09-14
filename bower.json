@@ -1,12 +1,12 @@
 {
-  "name": "gothamcar",
+  "name": "gothamMovie",
   "description": "",
   "main": "index.js",
   "authors": [
     "haseeb bhatti <haseebhatti@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/haseebhatti/gothamcar",
+  "homepage": "https://github.com/haseebhatti/gothamMovie",
   "ignore": [
     "**/.*",
     "node_modules",

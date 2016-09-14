@@ -52302,22 +52302,22 @@
 	(function () {
 	  'use strict';
 	
-	  function SelectedCarsFactory () {
+	  function SelectedmoviesFactory () {
 	    var kart = [];
 	    return {
 	      getKart: function () {
 	        return kart;
 	      },
-	      addToKart: function (car) {
-	        kart.push(car);
+	      addToKart: function (movie) {
+	        kart.push(movie);
 	      },
-	      buy: function (car) {
-	        return 'Thanks for buying ' + car.name;
+	      buy: function (movie) {
+	        return 'Thanks for buying ' + movie.name;
 	      }
 	    };
 	  }
 	  angular.module('app.checkout', [])
-	    .factory('SelectedCarsFactory', SelectedCarsFactory);
+	    .factory('SelectedmoviesFactory', SelectedmoviesFactory);
 	}());
 
 
@@ -52327,16 +52327,16 @@
 
 	(function () {
 	  'use strict';
-	  function SelectedCarsCtrl (SelectedCarsFactory) {
+	  function SelectedmoviesCtrl (SelectedmoviesFactory) {
 	    this.display = '';
-	    this.cart = SelectedCarsFactory.getKart();
-	    this.buy = function (car) {
-	      this.display = SelectedCarsFactory.buy(car);
+	    this.moviet = SelectedmoviesFactory.getKart();
+	    this.buy = function (movie) {
+	      this.display = SelectedmoviesFactory.buy(movie);
 	    };
 	  }
 	
 	  angular.module('app.checkout')
-	    .controller('SelectedCarsCtrl', SelectedCarsCtrl);
+	    .controller('SelectedmoviesCtrl', SelectedmoviesCtrl);
 	}());
 
 
@@ -52358,8 +52358,8 @@
 	(function () {
 	  'use strict';
 	
-	  function carService () {
-	    var cars = [{
+	  function movieService () {
+	    var movies = [{
 	      'product_description': 'Mercedes Benz E63 AMG',
 	
 	      'shipping_details': 'charges for shipping $2,000',
@@ -52398,7 +52398,7 @@
 	
 	        'shipping_details': 'charges for shipping $18',
 	
-	        'customer_reviews': 'The GT has some of the most stunningly exotic bodywork in existence. Highlights include a mid-engine twin-turbo 3.5-liter V-6 making more than 600 hp, carbon-fiber construction and body panels, active aerodynamics, and a seven-speed dual-clutch automatic; a manual won’t be offered. Mark your calendars: A second chance to apply to own a GT comes in early 2018.',
+	        'customer_reviews': 'The GT has some of the most stunningly exotic bodywork in existence. Highlights include a mid-engine twin-turbo 3.5-liter V-6 making more than 600 hp, moviebon-fiber construction and body panels, active aerodynamics, and a seven-speed dual-clutch automatic; a manual won’t be offered. Mark your calendars: A second chance to apply to own a GT comes in early 2018.',
 	
 	        'price': '$400,000',
 	
@@ -52415,7 +52415,7 @@
 	
 	        'shipping_details': 'charges for shipping $20',
 	
-	        'customer_reviews': 'doesn’t matter what you call it—GT-R or, more fittingly, Godzilla—Nissan’s range topper is a supercar-stomping, high-tech dynamo. Its 3.8-liter twin-turbo V-6 makes a mighty 565 hp while a six-speed dual-clutch automatic and all-wheel drive team up to put all that power to the pavement',
+	        'customer_reviews': 'doesn’t matter what you call it—GT-R or, more fittingly, Godzilla—Nissan’s range topper is a supermovie-stomping, high-tech dynamo. Its 3.8-liter twin-turbo V-6 makes a mighty 565 hp while a six-speed dual-clutch automatic and all-wheel drive team up to put all that power to the pavement',
 	
 	        'price': '$149,990',
 	
@@ -52432,7 +52432,7 @@
 	
 	        'shipping_details': 'charges for shipping $15',
 	
-	        'customer_reviews': 'Brutally powerful and obscenely flamboyant, the Aventador is unburdened by reality. Crazy expensive and crazy fast, it’s capable of amazing performance without feeling like it’s going to snap-spin into a ditch, which is refreshing in a supercar. Available as a coupe (or roadster), it has a 6.5-liter 691-hp V-12, a 7-speed automated manual transmission and all-wheel drive. For the ultimate, the Superveloce has 740 hp and a claimed top speed of 217 mph. In our testing, it did 0-60 in 2.7 seconds.',
+	        'customer_reviews': 'Brutally powerful and obscenely flamboyant, the Aventador is unburdened by reality. Crazy expensive and crazy fast, it’s capable of amazing performance without feeling like it’s going to snap-spin into a ditch, which is refreshing in a supermovie. Available as a coupe (or roadster), it has a 6.5-liter 691-hp V-12, a 7-speed automated manual transmission and all-wheel drive. For the ultimate, the Superveloce has 740 hp and a claimed top speed of 217 mph. In our testing, it did 0-60 in 2.7 seconds.',
 	
 	        'price': '$402,995',
 	
@@ -52448,7 +52448,7 @@
 	        'product_description': 'Porche 911 Turbo',
 	        'shipping_details': 'charges for shipping $20',
 	
-	        'customer_reviews': 'For decades, the 911 Turbo has been the stuff of legends, and it remains so today. With a monstrous 540 hp on tap—make that 580 hp in the case of the Turbo S—and a seven-speed dual-clutch automatic doing the shifting, Porsche’s all-wheel-drive supercar can hit 60 mph in less than three seconds. Take your pick of coupe or cabriolet; the exterior styling is timelessly gorgeous, and its luxurious interior makes this precious road rocket a genuine pleasure to drive on any road, at any time.',
+	        'customer_reviews': 'For decades, the 911 Turbo has been the stuff of legends, and it remains so today. With a monstrous 540 hp on tap—make that 580 hp in the case of the Turbo S—and a seven-speed dual-clutch automatic doing the shifting, Porsche’s all-wheel-drive supermovie can hit 60 mph in less than three seconds. Take your pick of coupe or cabriolet; the exterior styling is timelessly gorgeous, and its luxurious interior makes this precious road rocket a genuine pleasure to drive on any road, at any time.',
 	
 	        'price': '$159,200',
 	
@@ -52459,25 +52459,25 @@
 	        'no_of_items': '12'
 	
 	      }];
-	    return cars;
+	    return movies;
 	  }
 	  var edmondsUrl = 'https://api.edmunds.com/api/vehicle/v2/makes?fmt=json&api_key=jzu8gwx7pnex9pz3qe8kzjrh';
-	  function carServiceFactory ($http, carService) {
+	  function movieServiceFactory ($http, movieService) {
 	    function getDataFn () {
 	      return $http.get(edmondsUrl)
 	        .then(function (response) {
 	          return response.data;
 	        // we will work on thi tmmrw. we will simulate a failure
 	        })
-	        .catch(carService);
+	        .catch(movieService);
 	    }
 	    return {
 	      getData: getDataFn
 	    };
 	  }
 	  angular.module('app.homePage', [])
-	    .value('carService', carService())
-	    .factory('carServiceFactory', carServiceFactory);
+	    .value('movieService', movieService())
+	    .factory('movieServiceFactory', movieServiceFactory);
 	}());
 
 
@@ -52487,8 +52487,8 @@
 
 	(function () {
 	  'use strict';
-	  function HomePageCtrl (appDetails, carServiceFactory) {
-	    carServiceFactory.getData().then(function (edmondsUrl) {
+	  function HomePageCtrl (appDetails, movieServiceFactory) {
+	    movieServiceFactory.getData().then(function (edmondsUrl) {
 	      // this.edmondsUrl = edmondsUrl
 	    });
 	    this.appDetails = appDetails;
@@ -52543,17 +52543,17 @@
 	  angular.module('app.routing', ['ui.router'])
 	    .config(function ($stateProvider, $urlRouterProvider) {
 	      $stateProvider
-	        .state('cart', {
-	          url: '/cart',
-	          templateUrl: 'gothamCar/checkout/checkout.tpl.html',
-	          controller: 'SelectedCarsCtrl'
+	        .state('moviet', {
+	          url: '/moviet',
+	          templateUrl: 'gothamMovie/checkout/checkout.tpl.html',
+	          controller: 'SelectedmoviesCtrl'
 	        })
-	        .state('cars', {
-	          url: '/cars',
-	          templateUrl: 'gothamCar/home/homePage.tpl.html'
+	        .state('movies', {
+	          url: '/movies',
+	          templateUrl: 'gothamMovie/home/homePage.tpl.html'
 	        });
 	
-	      $urlRouterProvider.otherwise('/cars');
+	      $urlRouterProvider.otherwise('/movies');
 	    });
 	}());
 

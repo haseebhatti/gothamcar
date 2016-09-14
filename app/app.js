@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  require('./gothamCar/checkout/checkout.config.js');
-  require('./gothamCar/home/home.config.js');
-  require('./gothamCar/infiniteScroll/infiniteScroll.config.js');
-  require('./gothamCar/routingStuff/routingStuff.config.js');
+  require('./gothamMovie/checkout/checkout.config.js');
+  require('./gothamMovie/home/home.config.js');
+  require('./gothamMovie/infiniteScroll/infiniteScroll.config.js');
+  require('./gothamMovie/routingStuff/routingStuff.config.js');
 
   function edmundsInterceptor () {
     return {

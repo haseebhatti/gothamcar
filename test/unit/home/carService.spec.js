@@ -1,31 +1,31 @@
-describe('carServiceFactory', function () {
+describe('movieServiceFactory', function () {
   'use strict';
-  var carServiceFactory,
+  var movieServiceFactory,
 
     $httpBackend,
     $rootScope;
   var edmondsUrl = 'https://api.edmunds.com/api/vehicle/v2/makes?fmt=json&api_key=jzu8gwx7pnex9pz3qe8kzjrh';
-  // console.log(cars)
+  // console.log(movies)
   beforeEach(module('app.homePage'));
-  beforeEach(inject(function (_carServiceFactory_, _$httpBackend_, _$rootScope_) {
+  beforeEach(inject(function (_movieServiceFactory_, _$httpBackend_, _$rootScope_) {
     $httpBackend = _$httpBackend_;
     $rootScope = _$rootScope_;
-    carServiceFactory = _carServiceFactory_;
+    movieServiceFactory = _movieServiceFactory_;
 
     $httpBackend.when('GET', edmondsUrl).respond(edmondsUrl);
   }));
 
-  it('should define factory carServiceFactory', function () {
-    expect(carServiceFactory.getData).toBeDefined();
+  it('should define factory movieServiceFactory', function () {
+    expect(movieServiceFactory.getData).toBeDefined();
   });
-  it('should return an inventory of cars', function () {
-    var promise = carServiceFactory.getData();
+  it('should return an inventory of movies', function () {
+    var promise = movieServiceFactory.getData();
     $httpBackend.flush();
 
     expect(promise.$$state.value).toEqual(edmondsUrl);
   });
   it('should return data when promise is resolved', function () {
-    var promise = carServiceFactory.getData();
+    var promise = movieServiceFactory.getData();
     var returnData;
     $httpBackend.flush();
 
@@ -38,7 +38,7 @@ describe('carServiceFactory', function () {
   });
   it('should call http when to get inventory', function () {
     $httpBackend.expectGET(edmondsUrl);
-    carServiceFactory.getData();
+    movieServiceFactory.getData();
     $httpBackend.flush();
   });
 });

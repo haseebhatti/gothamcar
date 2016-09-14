@@ -1,15 +1,15 @@
-describe('SelectedCarsFactory', function () {
+describe('SelectedmoviesFactory', function () {
   'use strict';
-  var SelectedCarsFactory;
+  var SelectedmoviesFactory;
   beforeEach(module('app.checkout'));
-  beforeEach(inject(function (_SelectedCarsFactory_) {
-    SelectedCarsFactory = _SelectedCarsFactory_;
+  beforeEach(inject(function (_SelectedmoviesFactory_) {
+    SelectedmoviesFactory = _SelectedmoviesFactory_;
   }));
   it('should define kart service factory', function () {
-    expect(SelectedCarsFactory).toBeDefined();
+    expect(SelectedmoviesFactory).toBeDefined();
   });
   it('should return back message when buy is called', function () {
-    var car = {name: 'viper'};
-    expect(SelectedCarsFactory.buy(car)).toEqual('Thanks for buying viper');
+    var movie = {name: 'viper'};
+    expect(SelectedmoviesFactory.buy(movie)).toEqual('Thanks for buying viper');
   });
 });

@@ -7,20 +7,20 @@ describe('Routing', function () {
     $state = $injector.get('$state');
     $location = $injector.get('$location');
     var $templateCache = $injector.get('$templateCache');
-    $templateCache.put('gothamCar/checkout/checkout.tpl.html', '');
-    $templateCache.put('gothamCar/home/homePage.tpl.html', '');
+    $templateCache.put('gothamMovie/checkout/checkout.tpl.html', '');
+    $templateCache.put('gothamMovie/home/homePage.tpl.html', '');
   }));
 
-  it('should respond when state is cart', function () {
-    $state.go('cart');
+  it('should respond when state is moviet', function () {
+    $state.go('moviet');
     $rootScope.$digest();
-    expect($state.current.url).toEqual('/cart');
-    expect($location.$$path).toEqual('/cart');
+    expect($state.current.url).toEqual('/moviet');
+    expect($location.$$path).toEqual('/moviet');
   });
-  it('should got to cars when url is invalid', function () {
+  it('should got to movies when url is invalid', function () {
     $location.url('/stuff');
     $rootScope.$digest();
-    expect($state.current.url).toEqual('/cars');
-    expect($location.$$path).toEqual('/cars');
+    expect($state.current.url).toEqual('/movies');
+    expect($location.$$path).toEqual('/movies');
   });
 });

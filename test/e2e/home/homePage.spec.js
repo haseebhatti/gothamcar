@@ -1,11 +1,11 @@
 var homePage = require('./homePage');
 'use strict';
-describe('Gotham Cars', function () {
+describe('Gotham movies', function () {
   beforeEach(function () {});
-  it('should have a title of Gotham Car', function () {
-    expect(homePage.getTitle()).toEqual('Gotham Car');
+  it('should have a title of Gotham movie', function () {
+    expect(homePage.getTitle()).toEqual('Gotham movie');
   });
-  it('should have car button active', function () {
-    expect(homePage.getActiveButtonText()).toBe('Cars');
+  it('should have movie button active', function () {
+    expect(homePage.getActiveButtonText()).toBe('movies');
   });
 });

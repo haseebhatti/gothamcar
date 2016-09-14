@@ -1,7 +1,7 @@
 (function () {
   'use strict';
-  function HomePageCtrl (appDetails, carServiceFactory) {
-    carServiceFactory.getData().then(function (edmondsUrl) {
+  function HomePageCtrl (appDetails, movieServiceFactory) {
+    movieServiceFactory.getData().then(function (edmondsUrl) {
       // this.edmondsUrl = edmondsUrl
     });
     this.appDetails = appDetails;

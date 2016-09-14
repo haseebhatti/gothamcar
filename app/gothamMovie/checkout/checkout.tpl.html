@@ -1,0 +1,61 @@
+	<div id="movieListWrapper" >
+
+		<form role="form">
+
+			<div class="form-group">
+
+				<input type="text" class="form-control"
+					placeholder="search here....">
+
+
+
+			</div>
+
+		</form>
+
+		<div >
+
+			<ul class="list-unstyled" >
+
+				<li class="movie"
+					ng-repeat="movie in allproducts">
+
+
+					<div class="movie-details clearfix">
+
+						<h3>{{sc.price}}</h3>
+
+						<p>{{movie.shipping_details}}</p>
+
+						<ul class="list-unstyled list-inline">
+
+							<li>rating: {{movie.stock_availability}}</li>
+
+							<li>Binding: {{movie.price}}</li>
+
+							<li>Publisher: {{movie.price}}</li>
+
+							<li>Released: {{movie.price}}</li>
+
+						</ul>
+
+						<p>{{movie.price}}</p>
+
+						<button class="btn btn-info pull-right" ng-click="addToKart(movie)">Add
+						</button>
+
+
+
+
+
+
+
+
+
+					</div>
+
+				</li>
+
+			</ul>
+</div>
+</div>

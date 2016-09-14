@@ -54,7 +54,7 @@ display: inline;
 
 
 
-#carListWrapper {
+#movieListWrapper {
 
 
 width:100%;
@@ -65,7 +65,7 @@ padding:10px;
 
 
 
-#carListWrapper input{
+#movieListWrapper input{
 
 
 width:25%;
@@ -75,7 +75,7 @@ width:25%;
 
 
 
-#carListWrapper .car{
+#movieListWrapper .movie{
 
 border: 1px solid gray;
 
@@ -88,7 +88,7 @@ margin-bottom:10px;
 
 
 
-#carListWrapper .car .car-details{
+#movieListWrapper .movie .movie-details{
 
 margin-left:400px;
 

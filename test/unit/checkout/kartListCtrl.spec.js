@@ -1,27 +1,27 @@
-describe('SelectedCarsCtrl', function () {
+describe('SelectedmoviesCtrl', function () {
   'use strict';
-  var scope,controller,SelectedCarsFactory;
+  var scope,controller,SelectedmoviesFactory;
   beforeEach(module('app.checkout'));
-  beforeEach(inject(function ($rootScope, $controller, _SelectedCarsFactory_) {
+  beforeEach(inject(function ($rootScope, $controller, _SelectedmoviesFactory_) {
     scope = $rootScope.$new();
-    spyOn(_SelectedCarsFactory_, 'getKart');
-    spyOn(_SelectedCarsFactory_, 'buy').and.returnValue('Mock Buy Response');
+    spyOn(_SelectedmoviesFactory_, 'getKart');
+    spyOn(_SelectedmoviesFactory_, 'buy').and.returnValue('Mock Buy Response');
 
-    SelectedCarsFactory = _SelectedCarsFactory_;
+    SelectedmoviesFactory = _SelectedmoviesFactory_;
 
-    controller = $controller('SelectedCarsCtrl as sc', {
+    controller = $controller('SelectedmoviesCtrl as sc', {
       $scope: scope,
-      SelectedCarsFactory: _SelectedCarsFactory_
+      SelectedmoviesFactory: _SelectedmoviesFactory_
     });
   }));
   describe('Initialized', function () {
     it('should call getKart', function () {
-      expect(SelectedCarsFactory.getKart).toHaveBeenCalled();
+      expect(SelectedmoviesFactory.getKart).toHaveBeenCalled();
     });
   });
   it('should call buy when controller buy method is called', function () {
-    controller.buy({name: 'car'});
-    expect(SelectedCarsFactory.buy).toHaveBeenCalledWith({name: 'car'});
+    controller.buy({name: 'movie'});
+    expect(SelectedmoviesFactory.buy).toHaveBeenCalledWith({name: 'movie'});
   });
   it('should set display when controller buy is called', function () {
     controller.buy({name: 'viper'});
