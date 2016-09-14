@@ -15,10 +15,10 @@ describe('MyCtrl', function () {
       appDetails = scope.hpc.appDetails;
     });
     it('should have default title ', function () {
-      expect(appDetails.title).toEqual('Gotham Car');
+      expect(appDetails.title).toEqual('Gotham Movies');
     });
     it('should have default tagline', function () {
-      expect(appDetails.tagline).toEqual('We have all kinds of cars');
+      expect(appDetails.tagline).toEqual('We have all kinds of movies');
     });
   });
 });

@@ -1,5 +1,5 @@
 (function () {
   'use strict';
-  require('./carService');
+  require('./carFactory');
   require('./homePageController');
 }());
