@@ -1,8 +1,11 @@
 (function () {
   'use strict';
   function HomePageCtrl (appDetails, movieServiceFactory) {
-    movieServiceFactory.getData().then(function (edmondsUrl) {
-      // this.edmondsUrl = edmondsUrl
+    var vm = this;
+    movieServiceFactory.getData().then(function (data) {
+      vm.movies = data;
+
+    // this.edmondsUrl = edmondsUrl
     });
     this.appDetails = appDetails;
   }

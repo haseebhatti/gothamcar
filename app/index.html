@@ -8,7 +8,11 @@
 </head>
 <body>
 <div id="header-wrapper" ng-controller="HomePageCtrl as hpc">
+<div ng-repeat='movie in hpc.movies'>
+	<movie-display movie="{{movie}}"></movie-display>
 
+
+</div>
 		<span class="logo pull-left">{{hpc.appDetails.title}}</span>
 		<span class="tagline pull-left">{{hpc.appDetails.tagline}}</span>
 
@@ -17,7 +21,7 @@
 
 	      <li><a ui-sref="movies">Movies</a></li>
 
-	      <li><a ui-sref="moviet">movieT</a></li>
+	      <li><a ui-sref="cart">Checkout</a></li>
 
 	   </ul>
 

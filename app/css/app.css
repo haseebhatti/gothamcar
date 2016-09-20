@@ -1,4 +1,18 @@
+#movieDisplay{
+  border: 1px solid red;
+  height: 1000px;
+  width: 90%;
+  margin: 0 auto;
 
+}
+.nav nav-pills{
+display: inline;
+
+}
+ul li{
+  display: inline;
+  margin-right: 70px;
+}
 
 
 #headerWrapper{
@@ -12,40 +26,33 @@ display: inline;
 
 .logo{
 
-padding: 10px;
-
-margin-right:10px;
-
-font-size: 35px;
-
-font-family:fantasy;
 
 
-}
+margin-left:110px;
 
+font-size: 50px;
 
-
-.tagline{
-
-font-size:15px;
-
-margin-top:30px;
-
-margin-left:200px;
-
-font-family: monospace;
+font-family:cursive;
 
 
 }
 
+
+
+.tagline {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 200px;
+    font-family: monospace;
+}
 
 
 .nav-wrapper{
 
 
-margin-left:100px;
-
-margin-top:15px;
+margin-right:40px;
+float: right;
+font-size: xx-large;
 display: inline;
 
 }

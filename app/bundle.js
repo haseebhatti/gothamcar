@@ -52265,18 +52265,18 @@
 	
 	  __webpack_require__(20);
 	  __webpack_require__(23);
-	  __webpack_require__(26);
-	  __webpack_require__(28);
+	  __webpack_require__(27);
+	  __webpack_require__(29);
 	
-	  function edmundsInterceptor () {
+	  function movieInterceptor () {
 	    return {
 	      request: function (config) {
-	        config.url += '?fmt=json&api_key=jzu8gwx7pnex9pz3qe8kzjrh';
+	        config.url += '?api_key=613127419ba5df1a6dac21adb47c3df1&page=1';
 	      }
 	    };
 	  }
-	  angular.module('app', ['app.checkout', 'app.homePage', 'app.routing', 'app.infiniteScroll'])
-	    .factory('edmundsInterceptor', edmundsInterceptor)
+	  angular.module('app', ['app.checkout', 'app.homePage', 'app.routing', 'app.infiniteScroll', 'app.movieDisplay'])
+	    .factory('movieInterceptor', movieInterceptor)
 	    .config(function ($httpProvider) {
 	      //  $httpProvider.interceptors.push('edmundsInterceptor')
 	    });
@@ -52329,7 +52329,7 @@
 	  'use strict';
 	  function SelectedmoviesCtrl (SelectedmoviesFactory) {
 	    this.display = '';
-	    this.moviet = SelectedmoviesFactory.getKart();
+	    this.cart = SelectedmoviesFactory.getKart();
 	    this.buy = function (movie) {
 	      this.display = SelectedmoviesFactory.buy(movie);
 	    };
@@ -52348,6 +52348,7 @@
 	  'use strict';
 	  __webpack_require__(24);
 	  __webpack_require__(25);
+	  __webpack_require__(26);
 	}());
 
 
@@ -52358,125 +52359,28 @@
 	(function () {
 	  'use strict';
 	
-	  function movieService () {
-	    var movies = [{
-	      'product_description': 'Mercedes Benz E63 AMG',
-	
-	      'shipping_details': 'charges for shipping $2,000',
-	
-	      'customer_reviews': 'Absurd power and blistering acceleration are not the E63’s only party tricks; thanks to computer magic and an excellent suspension, it’s also quite agile. But oh, that mighty 577-hp 5.5-liter twin-turbo V-8 is a sweetheart of an engine. A seven-speed automatic and all-wheel drive are standard, as are 14-way power-operated and heated/cooled seats. If the sedan isn’t enough, check out the E63 wagon; it’ll haul your groceries in record time. Note: These models replace the Mercedes-Benz versions.',
-	
-	      'price': '$102,625',
-	
-	      'image_path': 'image/benz_e63.jpg',
-	
-	      'stock_availability': 'true',
-	
-	      'no_of_items': '10'
-	
-	    },
-	
-	      {
-	        'product_description': 'Dodge Viper',
-	
-	        'shipping_details': 'charges for shipping $25',
-	
-	        'customer_reviews': 'Premium Laguna Leather Six-Way Power Seats with Alcantara Headliner',
-	
-	        'price': '$107,995',
-	
-	        'image_path': 'image/dodge_viper.jpg',
-	
-	        'stock_availability': 'true',
-	
-	        'no_of_items': '14'
-	
-	      },
-	
-	      {
-	        'product_description': 'Ford GT',
-	
-	        'shipping_details': 'charges for shipping $18',
-	
-	        'customer_reviews': 'The GT has some of the most stunningly exotic bodywork in existence. Highlights include a mid-engine twin-turbo 3.5-liter V-6 making more than 600 hp, moviebon-fiber construction and body panels, active aerodynamics, and a seven-speed dual-clutch automatic; a manual won’t be offered. Mark your calendars: A second chance to apply to own a GT comes in early 2018.',
-	
-	        'price': '$400,000',
-	
-	        'image_path': 'image/ford_gt.jpg',
-	
-	        'stock_availability': 'true',
-	
-	        'no_of_items': '14'
-	
-	      },
-	
-	      {
-	        'product_description': 'Nissan GTR Nismo',
-	
-	        'shipping_details': 'charges for shipping $20',
-	
-	        'customer_reviews': 'doesn’t matter what you call it—GT-R or, more fittingly, Godzilla—Nissan’s range topper is a supermovie-stomping, high-tech dynamo. Its 3.8-liter twin-turbo V-6 makes a mighty 565 hp while a six-speed dual-clutch automatic and all-wheel drive team up to put all that power to the pavement',
-	
-	        'price': '$149,990',
-	
-	        'image_path': 'image/gtr_nismo.jpg',
-	
-	        'stock_availability': 'true',
-	
-	        'no_of_items': '10'
-	
-	      },
-	
-	      {
-	        'product_description': 'Lamborgini Aventador',
-	
-	        'shipping_details': 'charges for shipping $15',
-	
-	        'customer_reviews': 'Brutally powerful and obscenely flamboyant, the Aventador is unburdened by reality. Crazy expensive and crazy fast, it’s capable of amazing performance without feeling like it’s going to snap-spin into a ditch, which is refreshing in a supermovie. Available as a coupe (or roadster), it has a 6.5-liter 691-hp V-12, a 7-speed automated manual transmission and all-wheel drive. For the ultimate, the Superveloce has 740 hp and a claimed top speed of 217 mph. In our testing, it did 0-60 in 2.7 seconds.',
-	
-	        'price': '$402,995',
-	
-	        'image_path': 'image/lambo_aventador.jpg',
-	
-	        'stock_availability': 'true',
-	
-	        'no_of_items': '15'
-	
-	      },
-	
-	      {
-	        'product_description': 'Porche 911 Turbo',
-	        'shipping_details': 'charges for shipping $20',
-	
-	        'customer_reviews': 'For decades, the 911 Turbo has been the stuff of legends, and it remains so today. With a monstrous 540 hp on tap—make that 580 hp in the case of the Turbo S—and a seven-speed dual-clutch automatic doing the shifting, Porsche’s all-wheel-drive supermovie can hit 60 mph in less than three seconds. Take your pick of coupe or cabriolet; the exterior styling is timelessly gorgeous, and its luxurious interior makes this precious road rocket a genuine pleasure to drive on any road, at any time.',
-	
-	        'price': '$159,200',
-	
-	        'image_path': 'image/porche_turbo.png',
-	
-	        'stock_availability': 'true',
-	
-	        'no_of_items': '12'
-	
-	      }];
-	    return movies;
+	  function transform (movie) {
+	    return {
+	      posterPath: movie.poster_path,
+	      overView: movie.overview
+	    };
 	  }
-	  var edmondsUrl = 'https://api.edmunds.com/api/vehicle/v2/makes?fmt=json&api_key=jzu8gwx7pnex9pz3qe8kzjrh';
-	  function movieServiceFactory ($http, movieService) {
+	  function movieServiceFactory ($http) {
 	    function getDataFn () {
-	      return $http.get(edmondsUrl)
+	      return $http.get('http://api.themoviedb.org/3/discover/movie?api_key=613127419ba5df1a6dac21adb47c3df1&page=1')
 	        .then(function (response) {
-	          return response.data;
-	        // we will work on thi tmmrw. we will simulate a failure
+	          // console.log(response.data.results)
+	          return response.data.results;
 	        })
-	        .catch(movieService);
+	        .then(function (data) {
+	          return data.map(transform);
+	        });
 	    }
 	    return {
 	      getData: getDataFn
 	    };
 	  }
 	  angular.module('app.homePage', [])
-	    .value('movieService', movieService())
 	    .factory('movieServiceFactory', movieServiceFactory);
 	}());
 
@@ -52488,8 +52392,11 @@
 	(function () {
 	  'use strict';
 	  function HomePageCtrl (appDetails, movieServiceFactory) {
-	    movieServiceFactory.getData().then(function (edmondsUrl) {
-	      // this.edmondsUrl = edmondsUrl
+	    var vm = this;
+	    movieServiceFactory.getData().then(function (data) {
+	      vm.movies = data;
+	
+	    // this.edmondsUrl = edmondsUrl
 	    });
 	    this.appDetails = appDetails;
 	  }
@@ -52503,16 +52410,35 @@
 
 /***/ },
 /* 26 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	(function () {
-	  'use strict';
-	  __webpack_require__(27);
-	}());
+	  angular.module('app.movieDisplay', [])
+	    .directive('movieDisplay', function () {
+	      return {
+	        restrict: 'E',
+	        replace: true,
+	        templateUrl: 'gothamMovie/home/homePage.tpl.html',
+	        scope: {
+	          movie: '@'
+	        }
+	      };
+	    });
+	})();
 
 
 /***/ },
 /* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	(function () {
+	  'use strict';
+	  __webpack_require__(28);
+	}());
+
+
+/***/ },
+/* 28 */
 /***/ function(module, exports) {
 
 	(function () {
@@ -52525,17 +52451,17 @@
 
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function () {
 	  'use strict';
-	  __webpack_require__(29);
+	  __webpack_require__(30);
 	}());
 
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports) {
 
 	(function () {
@@ -52543,8 +52469,8 @@
 	  angular.module('app.routing', ['ui.router'])
 	    .config(function ($stateProvider, $urlRouterProvider) {
 	      $stateProvider
-	        .state('moviet', {
-	          url: '/moviet',
+	        .state('checkout', {
+	          url: '/checkout',
 	          templateUrl: 'gothamMovie/checkout/checkout.tpl.html',
 	          controller: 'SelectedmoviesCtrl'
 	        })

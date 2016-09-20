@@ -2,7 +2,7 @@
   'use strict';
   function SelectedmoviesCtrl (SelectedmoviesFactory) {
     this.display = '';
-    this.moviet = SelectedmoviesFactory.getKart();
+    this.cart = SelectedmoviesFactory.getKart();
     this.buy = function (movie) {
       this.display = SelectedmoviesFactory.buy(movie);
     };

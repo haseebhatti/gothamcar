@@ -6,15 +6,15 @@
   require('./gothamMovie/infiniteScroll/infiniteScroll.config.js');
   require('./gothamMovie/routingStuff/routingStuff.config.js');
 
-  function edmundsInterceptor () {
+  function movieInterceptor () {
     return {
       request: function (config) {
-        config.url += '?fmt=json&api_key=jzu8gwx7pnex9pz3qe8kzjrh';
+        config.url += '?api_key=613127419ba5df1a6dac21adb47c3df1&page=1';
       }
     };
   }
-  angular.module('app', ['app.checkout', 'app.homePage', 'app.routing', 'app.infiniteScroll'])
-    .factory('edmundsInterceptor', edmundsInterceptor)
+  angular.module('app', ['app.checkout', 'app.homePage', 'app.routing', 'app.infiniteScroll', 'app.movieDisplay'])
+    .factory('movieInterceptor', movieInterceptor)
     .config(function ($httpProvider) {
       //  $httpProvider.interceptors.push('edmundsInterceptor')
     });

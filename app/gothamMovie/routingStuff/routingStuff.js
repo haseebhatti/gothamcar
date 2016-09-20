@@ -3,8 +3,8 @@
   angular.module('app.routing', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('moviet', {
-          url: '/moviet',
+        .state('checkout', {
+          url: '/checkout',
           templateUrl: 'gothamMovie/checkout/checkout.tpl.html',
           controller: 'SelectedmoviesCtrl'
         })
